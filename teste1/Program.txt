@@ -1,0 +1,57 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1;
+            int num2;
+            string opcao;
+            decimal resultado;
+            string sair;
+
+
+            do
+            {
+                Console.WriteLine(" digite um numero para calcular");
+                    num1 = int.Parse(Console.ReadLine());
+                Console.WriteLine("digite outro numero");
+                    num2 = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Escolha qual função deseja utilizar +,-,*,/");
+                    opcao = Console.ReadLine();
+            switch (opcao)
+                {
+                    case "+":
+                        resultado = num1 + num2;
+                        Console.WriteLine(" O Resultado é:" + resultado);
+                        break;
+                    case "-":
+                        resultado = num1 - num2;
+                        Console.WriteLine(" O Resultado é:" + resultado);
+                        break;
+                    case "*":
+                        resultado = num1 * num2;
+                        Console.WriteLine(" O Resultado é:" + resultado);
+                        break;
+                    case "/":
+                        resultado = num1 / num2;
+                        Console.WriteLine(" O Resultado é:" + resultado);
+                        break;
+                }
+
+
+                Console.WriteLine("deseja sair digite S Senão precione qualquer tecla");
+                sair = Console.ReadLine().ToUpper();
+            } while (sair != "S");
+            Console.ReadKey();
+
+        }
+}
+}
